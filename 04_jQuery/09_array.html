@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../../assets/js/lib/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  
+
+  <div id="box1"></div>
+  <script>
+
+    // 배열 생성 및 초기화
+    var fourSeason = ['spring', 'summer', 'autumn', 'winter'];
+
+    // 배열 요소 순회 each() 메소드
+    $.each(fourSeason, function(i){        // i : 배열 인덱스
+      console.log(i, fourSeason[i]);
+    })
+    $.each(fourSeason, function(i, elem){  // i : 배열 인덱스,  elem : 배열 요소
+      console.log(i, elem);
+    })
+
+    /*
+                  <ol>
+      1. spring     <li>spring</li>
+      2. summer     <li>summer</li>
+      3. autumn     <li>autumn</li>
+      4. winter     <li>winter</li>
+                  </ol>
+    */
+
+    var ol = $('<ol>');
+    
+    $.each(fourSeason, function(i, elem){
+      ol.append($('<li>').text(elem));
+    })
+
+    $('#box1').append(ol);
+
+  </script>
+
+
+  <hr>
+
+
+  <div id="box2"></div>
+  <script>
+
+    // 배열 생성 및 초기화
+    var people = [
+      {
+        'name': 'alice',
+        'age': 30,
+        'mobile': '010-0000-0000'
+      },
+      {
+        'name': 'james',
+        'age': 40,
+        'mobile': '010-1111-1111'
+      }
+    ]
+
+    // 테이블 만들기
+
+
+  </script>
+
+
+  <hr>
+
+
+  <div id="box3"></div>
+  <script>
+
+    // 배열 생성 및 초기화
+    var site = [
+      {
+        'host': '네이버',
+        'url': 'https://www.naver.com/',
+        'target': '_blank'
+      },
+      {
+        'host': '구글',
+        'url': 'https://www.google.com/',
+        'target': '_self'
+      }
+    ]
+
+    /*
+      <ul>
+        <li><a href="https://www.naver.com/" target="_blank">네이버</a></li>
+        <li><a href="https://www.google.com/" target="_self">구글</a></li>
+      </ul>
+    */
+    
+  </script>
+
+
+  <hr>
+
+
+  <div id="box4">
+    <ul>
+      <li class="movies">터미네이터</li>
+      <li class="movies">아바타</li>
+      <li class="movies">에일리언</li>
+      <li class="movies">스타워즈</li>
+      <li class="movies">로보캅</li>
+    </ul>
+  </div>
+  <script>
+
+    // class="movies"인 요소를 배열로 만들기
+
+    var movies = ['터미네이터', ...]
+
+  </script>
+
+
+  <hr>
+
+
+  <div id="box5">
+    <select id="region">
+      <option value="02">서울</option>
+      <option value="031">경기</option>
+      <option value="032">인천</option>
+    </select>
+  </div>
+  <script>
+
+    // id가 region인 요소를 배열로 만들기
+
+    var region = [
+      {
+        'name': '서울',
+        'tel': '02'
+      },
+      ...
+    ]
+
+  </script>
+
+
+
+
+
+</body>
+</html>
